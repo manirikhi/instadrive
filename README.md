@@ -1,6 +1,6 @@
 # instadrive
 
-A new Flutter project.
+Your driving instructor guide.
 
 ## Getting Started
 
