@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
     final textTheme = Theme.of(context).textTheme;
     return MaterialApp(
    debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Instadrive',
       theme: ThemeData(
          primarySwatch: Colors.blue,
          textTheme:GoogleFonts.latoTextTheme(textTheme).copyWith(
