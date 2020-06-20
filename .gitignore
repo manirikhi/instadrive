@@ -6,12 +6,13 @@
 .pub/
 build/
 ios/.generated/
+.dart_tool/
 packages
 .flutter-plugins
 functions/node_modules/
-.dart_tool/
-**/pubspec.lock
+pubspec.lock
 **/google-services.json
+**/GoogleService-Info.plist
 
 
 

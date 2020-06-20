@@ -1,4 +1,4 @@
-package com.example.instadrive
+package com.techbyte.instadrive
 
 import io.flutter.embedding.android.FlutterActivity
 
