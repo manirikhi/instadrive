@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'signup.dart';
+import 'login.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'Widget/bezierContainer.dart';
@@ -169,7 +169,7 @@ class _LoginPageState extends State<LoginPage> {
     return InkWell(
       onTap: () {
         Navigator.push(
-            context, MaterialPageRoute(builder: (context) => SignUpPage()));
+            context, MaterialPageRoute(builder: (context) => Login()));
       },
       child: Container(
         margin: EdgeInsets.symmetric(vertical: 20),

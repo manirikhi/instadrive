@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'welcomePage.dart';
+import 'register.dart';
+import 'cardprofile.dart';
+import 'camera.dart';
+
 
 class HomePage extends StatefulWidget {
   @override
@@ -8,48 +11,27 @@ class HomePage extends StatefulWidget {
 
 class _HomeState extends State<HomePage> {
   int _currentIndex = 0;
-  @override
-  Widget bodyLogin()
-   {
-    return SingleChildScrollView(
-      child: Container(
-        padding: EdgeInsets.symmetric(horizontal: 20),
-        height: MediaQuery.of(context).size.height,
-        width: MediaQuery.of(context).size.width,
-        decoration: BoxDecoration(
-            //borderRadius: BorderRadius.all(Radius.circular(10)),
-            boxShadow: <BoxShadow>[
-              BoxShadow(
-                  color: Colors.grey.shade200,
-                  offset: Offset(2, 4),
-                  blurRadius: 5,
-                  spreadRadius: 2)
-            ],
-            gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [Color(0xfffbb448), Color(0xffe46b10)])),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[],
-        ),
-      ),
-    );
-  }
+  final appTitle = 'Devoret';
 
+  Widget _bodyLogin()
+   {
+    return MyCard();
+  }
 
   void onTabTapped(int index) {
     setState(() {
+      if (index==2)
       Navigator.push(
-          context, MaterialPageRoute(builder: (context) => WelcomePage()));
+          context, MaterialPageRoute(builder: (context) => MyCamera()));
+          else
+           Navigator.push(
+          context, MaterialPageRoute(builder: (context) => Register()));
       _currentIndex = index;
     });
   }
 
-
   Widget build(BuildContext context) {
-    return Scaffold(
+    return Scaffold(appBar: AppBar(title: Text('Insta Drive'),),
         bottomNavigationBar: BottomNavigationBar(
           onTap: onTabTapped,
           backgroundColor: Colors.white30,
@@ -66,10 +48,10 @@ class _HomeState extends State<HomePage> {
             // new BottomNavigationBarItem(
             // icon: Icon(Icons.person), title: Text('Profile')),
             new BottomNavigationBarItem(
-                icon: Icon(Icons.smartphone), title: Text('Login'))
+                icon: Icon(Icons.photo_camera), title: Text('Camera'))
           ],
         ),
-        body: bodyLogin(),
+        body: _bodyLogin(),
     );
   }
 }

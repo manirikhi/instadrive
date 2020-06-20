@@ -10,5 +10,8 @@ packages
 .flutter-plugins
 functions/node_modules/
 .dart_tool/
-pubspec.lock
+**/pubspec.lock
+**/google-services.json
+
+
 
