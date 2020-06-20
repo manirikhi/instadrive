@@ -9,3 +9,9 @@ ios/.generated/
 packages
 .flutter-plugins
 functions/node_modules/
+.dart_tool/
+**/pubspec.lock
+**/google-services.json
+
+
+
